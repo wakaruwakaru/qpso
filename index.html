@@ -5,44 +5,67 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ギャラリー</title>
     <style>
-        /* 簡単なデザイン（CSS） */
+        /* 背景を黒、全体をダークモードに設定 */
         body {
             font-family: sans-serif;
-            background-color: #f9f9f9;
+            background-color: #0d0d0d; /* 深い黒 */
+            color: #fff;
             margin: 0;
             padding: 20px;
         }
+        
+        /* タイトルもネオンに光らせる */
         h1 {
             text-align: center;
-            color: #333;
+            color: #fff;
+            text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff; /* 青色ネオンの光 */
+            margin-bottom: 40px;
         }
+        
         .gallery {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 30px;
             max-width: 1000px;
             margin: 0 auto;
         }
+        
+        /* 画像のカード枠をネオンにする */
         .card {
-            background: #fff;
-            border: 1px solid #ddd;
+            background: #1a1a1a; /* 暗いグレー */
+            border: 2px solid #00f3ff; /* ネオンシアンの細い線 */
             border-radius: 8px;
             overflow: hidden;
             width: 300px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            /* 枠線の外側にネオンの光を出す（ボカシ効果） */
+            box-shadow: 0 0 15px rgba(0, 243, 255, 0.5), inset 0 0 10px rgba(0, 243, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
+
+        /* マウスを乗せたときにさらに輝く演出（不要なら消してもOK） */
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 25px rgba(0, 243, 255, 0.9);
+        }
+        
         .card img {
             width: 100%;
-            height: 200px;
-            object-fit: cover; /* 画像の比率を保ったまま枠に収める */
+            height: auto;
+            object-fit: cover;
             display: block;
+            border-bottom: 1px solid #00f3ff; /* 画像と文字の境界線も光らせる */
         }
+        
+        /* 文字をネオン色にする */
         .caption {
-            padding: 10px;
+            padding: 15px;
             font-size: 14px;
-            color: #666;
+            font-weight: bold;
+            color: #00f3ff; /* ネオンシアンの文字色 */
+            text-shadow: 0 0 5px rgba(0, 243, 255, 0.6); /* 文字の後ろの光 */
             text-align: center;
+            letter-spacing: 1px;
         }
     </style>
 </head>

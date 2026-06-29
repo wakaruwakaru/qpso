@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>画像ギャラリーサイト</title>
+    <style>
+        /* 簡単なデザイン（CSS） */
+        body {
+            font-family: sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .card {
+            background: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover; /* 画像の比率を保ったまま枠に収める */
+            display: block;
+        }
+        .caption {
+            padding: 10px;
+            font-size: 14px;
+            color: #666;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>私の画像ギャラリー</h1>
+
+    <div class="gallery">
+        <!-- 1枚目の画像 -->
+        <div class="card">
+            <img src="photo1.jpg" alt="海の写真">
+            <div class="caption">綺麗な夏の海</div>
+        </div>
+
+        <!-- 2枚目の画像 -->
+        <div class="card">
+            <img src="photo2.jpg" alt="山の写真">
+            <div class="caption">秋の紅葉した山</div>
+        </div>
+
+        <!-- 3枚目の画像 -->
+        <div class="card">
+            <img src="photo3.jpg" alt="カフェの写真">
+            <div class="caption">お気に入りのカフェラテ</div>
+        </div>
+    </div>
+
+</body>
+</html>
